@@ -6,7 +6,7 @@
 
 1. **Install Dependencies**:
    ```bash
-   pip install pyscf numpy scipy matplotlib
+   pip install -r requirements.txt
    ```
 
 2. **Clone and Setup**:
