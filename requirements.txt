@@ -2,3 +2,4 @@ numpy
 scipy
 pyscf
 matplotlib
+py3Dmol
