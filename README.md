@@ -23,6 +23,7 @@ The project includes a series of interactive Jupyter notebooks to help you get s
 - **[Lesson 1: TDA-JC Basics](./Lesson1_TDAJC.ipynb)**: An introduction to the Tamm-Dancoff approximation with Jaynes-Cummings (TDA-JC), Rotating-Wave Approximation (RWA), Rabi, and Pauli-Fierz (PF) models. Learn how to model polariton spectra as a function of coupling strength.
 - **[Lesson 2: Multi-State Coupling](./Lesson2_TDAnJC.ipynb)**: Extends the TDA-JC model to include multiple excited states ($TDA_n-JC$). Compare the differences between multi-state JC models and the full Pauli-Fierz treatment.
 - **[Lesson 3: Multi-System Applications](./Lesson3_many_mol.ipynb)**: Focuses on collective polaritons in systems containing many molecules. Understand the theoretical framework and computational application of TDA-JC and TDA-PF in multi-fragment configurations.
+- **[Lesson 4: Vibrational Polaritons](./Lesson4_vibration.ipynb)**: Explore Ground State QED-Kohn-Sham (QED-KS) theory and its application to vibrational polaritons. Learn how to calculate analytical gradients and Hessians, IR intensities, and simulate vibrational-photonic hybridization.
 
 ## ✨ Key Features
 
@@ -36,6 +37,10 @@ The project includes a series of interactive Jupyter notebooks to help you get s
   - Efficient Davidson and Davidson-QR algorithms for extracting polaritonic roots.
 - **Analytic Gradients (`qed/grad/`)**:
   - Implements analytic energy gradients for QED-TDDFT states, enabling geometry optimizations on polaritonic potential energy surfaces.
+- **Vibrational Properties (`vibrational/`)**:
+  - **Ground State QED-KS**: Self-consistent treatment of the cavity vacuum field.
+  - **Analytic Gradients & Hessians**: For QED-KS ground states.
+  - **Vibrational Spectra**: IR intensity and vibrational-photonic hybridization analysis.
 - **Multi-Fragment Simulations**:
   - Specialized drivers for **Collective Polaritons** with support for inter-fragment Coulomb and Dipole-Dipole interactions.
 
