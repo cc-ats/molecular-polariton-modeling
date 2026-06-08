@@ -1,5 +1,6 @@
-from lumeq import sys, np
-from lumeq.utils import print_matrix
+import sys
+import numpy as np
+from qed.utils import print_matrix
 
 class fdiff():
     def __init__(self, norder=2, step_size=1e-3, unit=1.):

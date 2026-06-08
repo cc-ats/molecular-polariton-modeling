@@ -5,7 +5,7 @@ from qed.utils import convert_units, print_matrix
 import matplotlib.pyplot as plt
 
 from scipy import signal, fftpack
-
+from scipy.stats import norm
 from pyscf import lib
 from pyscf.lib import logger
 from pyscf.dft.rks import RKS
@@ -28,7 +28,7 @@ def fit_val(positions, heighs, broaden):
     return (ix, iy)
 
 
-def plot_spectra(peak_centers, peak_intens, broaden, fig_name):
+def plot_spectra(peak_centers, peak_intens, broaden, fig_name=None):
     ix, iy = fit_val(peak_centers, peak_intens, broaden)
     plt.plot(ix, iy)
     plt.xlim(800,3600)
@@ -38,7 +38,10 @@ def plot_spectra(peak_centers, peak_intens, broaden, fig_name):
     plt.xlabel("Frequency (cm$^{-1}$)",fontsize=16)
     plt.ylabel("Intensity",fontsize=16)
     plt.tight_layout()
-    plt.savefig(fig_name)
+    if fig_name:
+        plt.savefig(fig_name)
+    else:
+        plt.show()
 
 
 def infrared(dip_dev, normal_mode):

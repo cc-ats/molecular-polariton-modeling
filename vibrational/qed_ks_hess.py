@@ -8,7 +8,7 @@ from vibrational.qed_ks_grad import get_multipole_matrix_d1, cal_multipole_matri
 from pyscf import lib
 from pyscf.lib import logger
 from pyscf.dft.rks import RKS
-from pyscf.hessian import rhf as rhf_hess
+from vibrational import rhf as rhf_hess
 from pyscf.hessian import rks as rks_hess
 
 def resemble_deriv_on_atoms(mol, mat0):
@@ -256,7 +256,12 @@ def make_h1(hessobj, mo_coeff, mo_occ, chkfile=None, atmlst=None, verbose=None):
 
 
 
-class Hessian(rks_hess.Hessian):
+class Hessian(rhf_hess.Hessian):
+    def __init__(self, scf_method):
+        super().__init__(scf_method)
+        self.grids = scf_method.grids
+        self.grid_response = True
+
     partial_hess_elec = partial_hess_elec
     make_h1 = make_h1
 

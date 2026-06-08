@@ -4,6 +4,7 @@ from qed.utils.pyscf_helper import *
 from qed.utils import convert_units, print_matrix
 from vibrational.qed_ks import polariton_cs
 from vibrational.qed_ks_grad import get_multipole_matrix_d1
+import vibrational.qed_ks_hess
 from vibrational.vibrational_spectra import get_dipole_dev, infrared
 
 from functools import reduce
