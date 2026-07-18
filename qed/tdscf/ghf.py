@@ -254,7 +254,8 @@ class TDMixin(lib.StreamObject):
 
         if getattr(self, 'has_offdiag', None) is None or self.nfrag == 1:
             self.has_offdiag = False
-        print('has_offdiag inter-fragment coupling?', self.has_offdiag)
+        if self.nfrag > 1:
+            print('has_offdiag inter-fragment coupling?', self.has_offdiag)
 
         if getattr(self, 'resonance_state', None) is None:
             energy = []
@@ -922,7 +923,8 @@ class FewLevel(TDMixin):
         has_k = cav_obj.has_k
         save_amplitude = getattr(self, 'save_amplitude', False)
         has_offdiag = getattr(self, 'has_offdiag', None)
-        print('has_offdiag inter-fragment coupling?', has_offdiag)
+        if self.nfrag > 1:
+            print('has_offdiag inter-fragment coupling?', self.has_offdiag)
 
         # this nstates is provided exciton state numbers for model hamiltonian
         matrix, trans_dip, mag_dip, amplitude = few_level_matrix(td_obj, cav_obj, has_dse, has_k, nstates, save_amplitude, has_offdiag)

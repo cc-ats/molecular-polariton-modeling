@@ -117,7 +117,7 @@ class RestrictedCavityModel(CavityModel):
                 occupation = 2
             elif scf_type in {'GHF', 'GKS'}:
                 occupation = 1
-            print('occupation:', occupation)
+            #print('occupation:', occupation)
             self.elec_occupation[n] = occupation
 
             mo_occ    = mf.mo_occ
