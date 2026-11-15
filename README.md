@@ -2,7 +2,7 @@
 
 `qed-tddft` is a Python library for Quantum-electrodynamical Time-dependent Density Functional Theory (QED-TDDFT) simulations, built on the [PySCF](https://pyscf.org/) framework. It enables the simulation of light-matter interactions in optical cavities, specifically focusing on polaritonic excited states and their potential energy surfaces.
 
-## 🚀 Installation
+## Installation
 
 1. **Install Dependencies**:
    ```bash
@@ -16,7 +16,7 @@
    export PYTHONPATH=$(pwd):$PYTHONPATH
    ```
 
-## 📚 Tutorials
+## Tutorials
 
 The project includes a series of interactive Jupyter notebooks to help you get started:
 
@@ -25,7 +25,7 @@ The project includes a series of interactive Jupyter notebooks to help you get s
 - **[Lesson 3: Multi-System Applications](./Lesson3_many_mol.ipynb)** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cc-ats/molecular-polariton-modeling/blob/khang-notebooks/Lesson3_many_mol.ipynb): Focuses on collective polaritons in systems containing many molecules. Understand the theoretical framework and computational application of TDA-JC and TDA-PF in multi-fragment configurations.
 - **[Lesson 4: Vibrational Polaritons](./Lesson4_vibration.ipynb)** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/cc-ats/molecular-polariton-modeling/blob/khang-notebooks/Lesson4_vibration.ipynb): Explore Ground State QED-Kohn-Sham (QED-KS) theory and its application to vibrational polaritons. Learn how to calculate analytical gradients and Hessians, IR intensities, and simulate vibrational-photonic hybridization.
 
-## ✨ Key Features
+## Key Features
 
 - **Cavity Models (`qed/cavity/`)**:
   - Supports Restricted (RHF/RKS), Unrestricted (UHF/UKS), and Generalized (GHF/GKS) frameworks.
@@ -44,7 +44,7 @@ The project includes a series of interactive Jupyter notebooks to help you get s
 - **Multi-Fragment Simulations**:
   - Specialized drivers for **Collective Polaritons** with support for inter-fragment Coulomb and Dipole-Dipole interactions.
 
-## 💻 Usage Examples
+## Usage Examples
 
 ### Python API
 ```python
@@ -74,7 +74,7 @@ Run collective polariton simulations using the provided driver:
 python qed/tdscf/collective_polariton.py examples/03-qed-tddft.in pf 0.010-y 0.1483
 ```
 
-## 📖 References
+## References
 
 If you use this software, please cite:
 
